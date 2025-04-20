@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Инструкция</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        h3 {
+            color: #777;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        p {
+            font-weight: bold;
+        }
+
+        a {
+            color: gray;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #4CAF50;
+            text-decoration: none;
+            text-shadow: 0 0 10px rgba(72, 202, 228, 0.8);
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 32px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #45a049;
+            box-shadow: 0 0 20px rgba(72, 202, 228, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Получение Робуксов</h1>
+        <h3>Открой <a href="https://create.roblox.com" target="_blank">роблокс студио</a> и создай гейм пасс на <span id="amount">...</span> R$</h3>
+        <p>Ты хочешь получить <span id="amount2">...</span> R$</p><br>
+        <button onclick="window.location.href='WriteMe.html'">Сделал</button>
+    </div>
+
+    <script>
+        const amount = localStorage.getItem("robuxAmount") || "???";
+        document.getElementById("amount").innerText = amount;
+        document.getElementById("amount2").innerText = amount;
+    </script>
+</body>
+</html>

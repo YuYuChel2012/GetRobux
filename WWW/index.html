@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Получить Робуксы Бесплатно</title>
+    <style>
+        /* Стили для контейнера */
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: bold; /* Жирный текст */
+        }
+
+        h3 {
+            color: #777;
+            margin-bottom: 30px;
+            font-weight: bold; /* Жирный текст */
+        }
+
+        /* Стили для текста "Робуксы" */
+        label {
+            font-weight: bold; /* Жирный текст */
+            font-size: 20px;
+            color: #333;
+        }
+
+        /* Стили для текста количества робуксов */
+        p {
+            font-weight: bold; /* Жирный текст */
+        }
+
+        /* Стили для ползунка */
+        input[type="range"] {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 12px;
+            background: #4CAF50; /* Зелёный фон ползунка */
+            border-radius: 5px;
+            outline: none;
+            transition: background 0.3s ease;
+        }
+
+        input[type="range"]:hover {
+            background: #409745; /* Плавное изменение фона при наведении */
+        }
+
+        /* Стили для бегунка ползунка */
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 25px;
+            height: 25px;
+            background: #226e25; /* Цвет бегунка */
+            border-radius: 50%;
+            cursor: pointer;
+            transition: box-shadow 0.3s ease;
+        }
+
+        input[type="range"]::-webkit-slider-thumb:hover {
+            box-shadow: 0 0 20px rgba(72, 202, 228, 0.8); /* Эффект свечения */
+        }
+
+        /* Стили для текста количества робуксов */
+        #sliderValue {
+            font-size: 20px;
+            color: #4CAF50;
+            text-shadow: 0 0 10px rgba(72, 202, 228, 0.8); /* Эффект свечения */
+            font-weight: bold; /* Жирный текст */
+        }
+
+        /* Стили для кнопки */
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 32px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold; /* Жирный текст */
+        }
+
+        button:hover {
+            background-color: #45a049;
+            box-shadow: 0 0 20px rgba(72, 202, 228, 0.8); /* Эффект свечения */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Бесплатные Робуксы Ограниченно!</h1>
+        <h3>Самый лучший сайт во всём мире.</h3>
+        <label for="slider">Робуксы: </label>
+        <input type="range" id="slider" name="slider" min="1" max="118" value="1" step="1">
+        <p>Количество Ваших Робуксов (Которые Вы Хотите Получить): <span id="sliderValue">1 R$</span></p>
+
+        <script>
+            // Получаем элемент ползунка
+            var slider = document.getElementById("slider");
+            var output = document.getElementById("sliderValue");
+
+            // Устанавливаем начальное значение
+            output.innerHTML = slider.value + " R$";
+
+            // Обработчик изменения значения
+            slider.oninput = function() {
+                output.innerHTML = this.value + " R$";
+            }
+
+            // Функция для перехода на второй файл и сохранения значения в localStorage
+            function goToNextPage() {
+                var sliderValue = document.getElementById("slider").value;
+                localStorage.setItem("robuxAmount", sliderValue);
+                window.location.href = "GetRobux.html";
+            }
+        </script>
+
+        <!-- Кнопка с переходом на второй файл -->
+        <button onclick="goToNextPage()">Получить Робуксы (Бесплатно)</button>
+    </div>
+</body>
+</html>
